@@ -1,0 +1,207 @@
+@import 'normalize.styl'
+@import 'font.styl'
+
+gris_claro = #676767
+gris_oscuro =#676767
+
+.action
+	font-size: 3em
+	color white
+.inline-block
+	display inline-block
+.hr
+	width 80%
+	margin 1em auto
+body
+	font-size: 16px
+a
+	text-decoration: none
+	color: inherit
+	
+header
+	background: #353535
+	width:100%
+	padding: 40px 0
+	color: white
+	text-align: center
+
+nav ul
+	background: #605D75
+	overflow: hidden
+	color: white
+	padding: 0
+	text-align: center
+	margin 0
+	transition: max-height 0.4s
+	-webkit-transition: max-height 0.4s
+ 
+nav ul li
+	display: inline-block
+	padding: 20px
+ 
+nav ul li:hover
+	background: #399077
+	
+section
+	//interlineado
+	line-height:1.5em
+	font-size: 0.8em
+	padding: 40px
+	width: 75% 
+	margin: 0 auto
+	
+.handle
+	width: 100%
+	background: #605D75
+	text-align: center
+	box-sizing: border-box
+	padding: 1em .7em
+	cursor: pointer
+	color white
+	display none
+	
+
+
+.titulo
+	font-size 3.2em
+	color gris_oscuro
+	font-family 'Lucida Bright'
+.description
+	font-size 1.4em
+	line-height 1em
+	color gris_claro
+	font-family 'HelveticaNeue'
+	
+.center
+	text-align center
+.redes-sociales
+	width 90%
+	margin 0 auto
+	cursor pointer
+	boder-radius: .4em
+	 
+.facebook
+	background #EF2673
+	span
+		border-right 1px solid transparent
+		margin-left .3em
+		margin-top: 0.4em
+	
+.twitter
+	background #605D75
+	span
+		border-right 1px solid transparent
+		margin-top: 0.4em
+.desc
+	color white
+	margin-left: 1em
+	
+.Section 
+	display none
+	.Article
+		display inline-block
+		width 30%
+		 
+
+	 
+	
+.Footer 
+	text-align center
+	span
+		display inline-block
+		padding .5em
+		margin 0 1em
+		cursor pointer
+
+	
+@media screen and (min-width: 400px)	
+	.titulo
+		font-size 4.2em
+	.description
+		font-size 1.6em
+	.facebook
+		margin-bottom 1em
+	.Footer
+		p
+			color gris_claro			
+			font-size 1.4em	
+ 	.login
+		p
+			border-bottom 3px solid #A4A4A5
+	
+	.login:hover
+		p
+			border-bottom 3px solid white
+			
+	.create-account
+		p
+			border-bottom 3px solid #A4A4A5
+		
+	.create-account:hover
+		p
+			border-bottom 3px solid white
+
+@media screen and (max-width: 580px)
+	nav ul
+		//esconde todo el ul del nav
+		max-height: 0em
+	.showing
+		//muestra el menu
+		max-height: 20em
+	nav ul li
+		box-sizing: border-box
+		width: 100%
+		padding: 1em
+	
+	.handle
+		display: block
+		
+@media screen and (min-width: 640px)	
+	.redes-sociales 
+		width: 59%
+		
+@media screen and (min-width: 768px)	
+	.hr
+		display none
+	.redes-sociales 
+		width: 40%
+	.Section
+		display: block
+		margin-top: 2em
+		width 73%
+		text-align: center
+		.Article
+			padding: 1em
+			margin: 0 1em
+			width: 10em				 	
+			p
+				text-align: initial
+	 
+			
+		
+	.create-account:hover
+		p
+			border-bottom 3px solid white
+	.Footer
+		background: #605d75
+		p
+			color white
+			font-size 1.25em
+	.login
+		p
+			border-bottom 3px solid #A4A4A5
+	
+	.login:hover
+		p
+			border-bottom 3px solid white
+			
+	.create-account
+		p
+			border-bottom 3px solid #A4A4A5
+		
+	.create-account:hover
+		p
+			border-bottom 3px solid white
+		
+		
+	
