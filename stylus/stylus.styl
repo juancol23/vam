@@ -4,6 +4,7 @@
 gris_claro = #676767
 gris_oscuro =#676767
 
+
 .action
 	font-size: 3em
 	color white
@@ -12,8 +13,21 @@ gris_oscuro =#676767
 .hr
 	width 80%
 	margin 1em auto
+	
+.desaparecer-registro
+	// display none
+	max-height 0px
+	overflow hidden
+	transition: 0.4s
+.desaparecer-logueo
+	// display none
+	max-height 0px
+	overflow hidden
+	transition: 0.4s
+
 body
 	font-size: 16px
+	  
 a
 	text-decoration: none
 	color: inherit
@@ -21,10 +35,12 @@ a
 header
 	background: #353535
 	width:100%
-	padding: 40px 0
+	// padding: 40px 0
 	color: white
 	text-align: center
-
+	img
+		width 60%
+		height 10em
 nav ul
 	background: #605D75
 	overflow: hidden
@@ -73,12 +89,12 @@ section
 	font-family 'HelveticaNeue'
 	
 .center
-	text-align center
+	text-align center		
 .redes-sociales
 	width 90%
 	margin 0 auto
-	cursor pointer
-	boder-radius: .4em
+	cursor pointer 
+	margin-top: 2em
 	 
 .facebook
 	background #EF2673
@@ -92,6 +108,14 @@ section
 	span
 		border-right 1px solid transparent
 		margin-top: 0.4em
+.message	
+	margin 0 auto
+	width 90%
+	p
+		overflow hidden 
+		max-height: 0em
+		transition: max-height .6s
+		color red
 .desc
 	color white
 	margin-left: 1em
@@ -99,11 +123,105 @@ section
 .Section 
 	display none
 	.Article
-		display inline-block
-		width 30%
-		 
+		display inline-block		
+		width 30%		 
+.titulo-form	
+	font-size: 2em
+	color: #676767
+	font-family: 'Lucida Bright'
+.login-form 	
+	text-align center
+	margin-bottom: 1em
+	.register 
+		transition 1s
+		margin: 0 auto
+		width: 180px
+		padding: 20px
+		background: #FFFFFF
+		border-radius: 3px
+		-webkit-box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3)
+		box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3)
+		input 
+			font-family: inherit
+			font-size: inherit
+			color: inherit
+			-webkit-box-sizing: border-box
+			-moz-box-sizing: border-box
+			box-sizing: border-box
+		.register-input 
+			display: block
+			width: 100%
+			height: 38px
+			margin-top: 2px
+			font-weight: 500
+			background: none
+			border: 0
+			border-bottom: 1px solid #d8d8d8
+		.register-input:focus 
+			border-color: #1e9ce6
+			outline: 0
+		.register-button 
+			display: block
+			width: 100%
+			height: 42px
+			margin-top: 25px
+			font-size: 16px
+			font-weight: bold
+			color: #494d59
+			text-align: center
+			text-shadow: 0 1px rgba(255, 255, 255, 0.5)
+			background: #fcfcfc
+			border: 1px solid
+			border-color: #d8d8d8 #d1d1d1 #c3c3c3
+			border-radius: 2px
+			cursor: pointer
+			background-image: -webkit-linear-gradient(top, #fefefe, #eeeeee)
+			background-image: -moz-linear-gradient(top, #fefefe, #eeeeee)
+			background-image: -o-linear-gradient(top, #fefefe, #eeeeee)
+			background-image: linear-gradient(to bottom, #fefefe, #eeeeee)
+			-webkit-box-shadow: inset 0 -1px rgba(0, 0, 0, 0.03), 0 1px rgba(0, 0, 0, 0.04)
+			box-shadow: inset 0 -1px rgba(0, 0, 0, 0.03), 0 1px rgba(0, 0, 0, 0.04)
+			.register-button:active 
+				background: #eee
+				border-color: #c3c3c3 #d1d1d1 #d8d8d8
+				background-image: -webkit-linear-gradient(top, #eeeeee, #fcfcfc)
+				background-image: -moz-linear-gradient(top, #eeeeee, #fcfcfc)
+				background-image: -o-linear-gradient(top, #eeeeee, #fcfcfc)
+				background-image: linear-gradient(to bottom, #eeeeee, #fcfcfc)
+				-webkit-box-shadow: inset 0 1px rgba(0, 0, 0, 0.03)
+				box-shadow: inset 0 1px rgba(0, 0, 0, 0.03)
+.register-button:focus 
+	outline: 0
+	
+.register-switch 
+	height: 32px
+	margin-bottom: 15px
+	padding: 4px
+	background: black
+	border-radius: 2px
+	-webkit-box-shadow: inset 0 1px rgba(0, 0, 0, 0.05), inset 1px 0 rgba(0, 0, 0, 0.02), inset -1px 0 rgba(0, 0, 0, 0.02)
+	box-shadow: inset 0 1px rgba(0, 0, 0, 0.05), inset 1px 0 rgba(0, 0, 0, 0.02), inset -1px 0 rgba(0, 0, 0, 0.02)
+.register-switch-input 
+	display: none
+.register-switch-label 
+	float: left
+	width: 50%
+	line-height: 32px
+	color: white
+	text-align: center
+	text-shadow: 0 -1px rgba(0, 0, 0, 0.2)
+	cursor: pointer
+.register-switch-input:checked + .register-switch-label 
+	font-weight: 500
+	color: white
+	text-shadow: 0 1px rgba(255, 255, 255, 0.5)
+	background: #6C6C6C
+	border-radius: 2px
+	-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(0, 0, 0, 0.1)
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(0, 0, 0, 0.1)
 
-	 
+
+
 	
 .Footer 
 	text-align center
@@ -115,6 +233,12 @@ section
 
 	
 @media screen and (min-width: 400px)	
+	.register 
+		transition 1s
+		width: 250px !important
+	.m
+		p
+			max-height: 2em
 	.titulo
 		font-size 4.2em
 	.description
@@ -154,13 +278,23 @@ section
 		padding: 1em
 	
 	.handle
-		display: block
-		
-@media screen and (min-width: 640px)	
+		display: block	
+	.m
+		p
+			max-height: 2em
+@media screen and (min-width: 640px)
+	.register 
+		width: 40%	
+	.m
+		p
+			max-height: 2em
 	.redes-sociales 
 		width: 59%
+ 
 		
-@media screen and (min-width: 1240px)	
+@media screen and (min-width: 768px)		
+	.register 
+		width: 40%	
 	.hr
 		display none
 	.redes-sociales 
@@ -203,5 +337,5 @@ section
 		p
 			border-bottom 3px solid white
 		
-		
+	 
 	

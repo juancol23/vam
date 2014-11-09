@@ -10,7 +10,7 @@
 </head>
 <body>
 	<header>
-		<img src="" alt="">
+		
 	</header>
 	<nav>
 		<ul>
@@ -19,7 +19,7 @@
 			<a href="#"><li>Album</li></a>
 			<a href="#"><li>Contact</li></a>
 			<a href="#"><li>Music</li></a>
-			<a href="#"><li>Des</li></a>
+			<a href="#Des"><li>Des</li></a>
 		</ul>
 		<div class="handle">
  			<span class="action icon-menu-r1"></span>
@@ -31,22 +31,59 @@
 		<h1 class="titulo center">Vampires</h1>	
 		<p class="description center">Todo tipo de historia que te <br> gusta, la encontraras en todas <br> partes </p>
 	 </div>
- <hr class="hr">
+ 
 	 <div class="redes-sociales center">
 	 	<div class="facebook ">
 	 		<span class="action icon-facebook inline-block"></span>
 	 		<div class="parrafo">
 	 			<p class="desc inline-block">Conéctate con Facebook</p>
 	 		</div>
-	 	</div>
+	 	</div>	 	
 	 	<div class="twitter ">
 	 		<span class="action icon-twitter inline-block"></span>
 	 		 <div class="parrafo">
-	 			<p class="desc inline-block">Conéctate con Facebook</p>
+	 			<p class="desc inline-block">Conéctate con Twitter</p>
 	 		</div>
-	 	</div>
-	 	
+	 	</div>	 		 	  	
 	 </div>
+	
+<span>
+	 <div class="message center">
+ 		<p class="des">Lo sentimos en este momento no esta disponible el servicio</p>	 		
+ 	 </div>
+ </span>
+
+ <div class="login-form desaparecer-registro">	
+ 	<h1 class="titulo-form">Registro</h1>
+ 	<form class="register">	  
+ 	  <input type="email" class="register-input" placeholder="Email address">
+ 	  <input type="password" class="register-input" placeholder="Password">
+ 	  
+		<br>
+ 	  <div class="register-switch">
+ 	    <input type="radio" name="sex" value="F" id="sex_f" class="register-switch-input" checked>
+ 	    <label for="sex_f" class="register-switch-label">Mujer</label>
+ 	    <input type="radio" name="sex" value="M" id="sex_m" class="register-switch-input">
+ 	    <label for="sex_m" class="register-switch-label">Hombre</label>
+ 	  </div>
+
+ 	  <input type="submit" value="Crear Cuenta" class="register-button">
+
+ 	</form>
+ </div> 
+
+  <div class="login-form desaparecer-logueo">	
+  	<h1 class="titulo-form">Login</h1>
+  	<form class="register">	  
+  	  <input type="email" class="register-input" placeholder="Email address">
+  	  <input type="password" class="register-input" placeholder="Password">
+  	  
+ 		<br>
+  	  <input type="submit" value="Ingresar" class="register-button">
+
+  	</form>
+  </div> 
+ 	
 
 <section class="Section">
 	<article class="Article">
@@ -66,16 +103,16 @@
 		<p class="">Si te gusta este evento no te olvides de compartirlo <br>
 			en las redes sociales junto a tus amigos <br></p>
 	</article>
+	
 </section>
-
-
+	
 <footer class="Footer">
 	<span class="login">
 		<p>Login</p>
 	</span>
 
 	<span class="create-account">
-		<p>create account</p>
+		<p id="Des">create account</p>
 	</span>
 </footer>
 
@@ -87,8 +124,57 @@
 			$("nav ul").toggleClass("showing");
 		});
 	</script>
+	<script>
+		$(".facebook").on("click", function(){
+			$("span div").toggleClass("m");
+		});
+	</script>
+	<script>
+		$(".twitter").on("click", function(){
+			$("span div").toggleClass("m");
+		})
+	</script>
+
+	<script>
+		$(".create-account").on("click", function(){
+			$(".login-form").toggle("", function(){
+				$(".login-form").removeClass("desaparecer-registro");
+			}
+		);			
+	})
+	</script>
+
+	<script>
+		$(".login").on("click", function(){
+			$(".login-form").toggle("", function(){
+				$(".login-form").removeClass("desaparecer-logueo");
+			}
+		);			
+	})
+	</script>
 
  
-</script>
+
+ <script>
+		$(document).ready(function(){
+		$('a[href^="#"]').on('click',function (e) {
+		    e.preventDefault();
+
+		    var target = this.hash;
+		    $target = $(target);
+
+		    $('html, body').stop().animate({
+		        'scrollTop': $target.offset().top
+		    }, 900, 'swing', function () {
+		        window.location.hash = target;
+		    });
+		});
+	});
+ </script>
+ 
+
+<!--  http://www.sitepoint.com/introduction-jquery-scroll-based-animations/ -->
+
+
 </body>
 </html>	
