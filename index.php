@@ -152,6 +152,16 @@
 
 	</div>
 
+	<form  id="Des" action="enviar_correo.php"  method="post" class="formulario">
+	  <label class="titulo asunto">Asunto</label><br/><br/>
+	    <input type="text" name="asunto"/><br/><br/>
+	   <label class="titulo ">Nombre</label><br/><br/>
+	    <input type="text" name="nombre"/><br/><br/>
+	  <labe class="titulo mensaje">Mensaje</labe><br/><br/>
+	    <textarea class="text-tarea" name="mensaje"></textarea><br>
+	    <input class="bottom" type="submit" value="Procesar"/>
+	</form>
+
 
 
 
@@ -162,7 +172,7 @@
 		</span>
 
 		<span class="create-account">
-			<p id="Des">create account</p>
+			<p>create account</p>
 
 		</span>
 	</footer>
@@ -177,9 +187,7 @@
 	</div>
 
 </div>
-
-
-
+	
 
 
 	<script>
