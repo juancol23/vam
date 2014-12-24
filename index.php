@@ -12,6 +12,7 @@
 	<meta property="og:image" content="http://lorempixel.com/output/city-q-g-576-232-2.jpg">
 	<meta charset="UTF-8">
 		<link rel="stylesheet" href="css/stylus.css"> 
+		<link rel="stylesheet" href="css/form.css">
 	<script src="js/jquery.js"></script>
 
 </head>
@@ -151,7 +152,7 @@
 
 
 	</div>
-
+<!-- Formulario -->
 	<form  id="Des" action="enviar_correo.php"  method="post" class="formulario">
 	  <label class="titulo asunto">Asunto</label><br/><br/>
 	    <input type="text" name="asunto"/><br/><br/>
